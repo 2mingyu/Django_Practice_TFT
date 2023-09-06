@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{myData.summonerName}}</title>
+</head>
+<body>
+    <div>
+        <h1>소환사 이름: {{myData.summonerName}}</h1>
+        <h2>Level: {{myData.summonerLevel}}</h2>
+    </div>
+    <div>
+        <div>
+            <h2 style="border: 1px solid blue; float: left; width: 33%;">
+            계급: {{myData.tier}}
+            </h2>
+        </div>
+        <div style="float: left; width: 33%;">
+            <h2 style="border: 1px solid blue;">
+                승리횟수: {{myData.winCount}}
+            </h2>
+            <h2 style="border: 1px solid blue;">
+                패배횟수: {{myData.lossCount}}
+            </h2>
+        </div>
+        <div style="float: left; width: 33%;">
+            <h2 style="border: 1px solid blue;">
+                게임 수: {{myData.gameCount}}
+            </h2>
+            <h2 style="border: 1px solid blue;">
+                승률: {{myData.winRate}}
+            </h2>
+        </div>
+    </div>
+        <div style="float: left; width: 33%;">
+            <div>
+                <h3 style="float: left; width: 33%;">
+                    시너지
+                </h3>
+                <h3 style="float: left; width: 33%;">
+                    게임수
+                </h3>
+                <h3 style="float: left; width: 33%;">
+                    승리 횟수
+                </h3>
+            </div>
+            {% for i in myData.traits %}
+                <div>
+                    <h3 style="float: left; width: 33%;">
+                        {{i.name}}
+                    </h3>
+                    <h3 style="float: left; width: 33%;">
+                        {{i.gameCount}}
+                    </h3>
+                    <h3 style="float: left; width: 33%;">
+                        {{i.winCount}}
+                    </h3>
+                </div>
+            {% endfor %}
+        </div>
+        <div style="float: left; width: 33%;">
+            <div>
+                <h3 style="float: left; width: 33%;">
+                    챔피언
+                </h3>
+                <h3 style="float: left; width: 33%;">
+                    게임수
+                </h3>
+                <h3 style="float: left; width: 33%;">
+                    승리횟수
+                </h3>
+            </div>
+            {% for i in myData.units %}
+                <div>
+                    <h3 style="float: left; width: 33%;">
+                        {{i.name}}
+                    </h3>
+                    <h3 style="float: left; width: 33%;">
+                        {{i.gameCount}}
+                    </h3>
+                    <h3 style="float: left; width: 33%;">
+                        {{i.winCount}}
+                    </h3>
+                </div>
+            {% endfor %}
+        </div>
+        <div style="float: left; width: 33%;">
+            <div>
+                <h3 style="float: left; width: 33%;">
+                    아이템
+                </h3>
+                <h3 style="float: left; width: 33%;">
+                    게임수
+                </h3>
+                <h3 style="float: left; width: 33%;">
+                    승리횟수
+                </h3>
+            </div>
+            {% for i in myData.items %}
+                <div>
+                    <h3 style="float: left; width: 33%;">
+                        {{i.name}}
+                    </h3>
+                    <h3 style="float: left; width: 33%;">
+                        {{i.gameCount}}
+                    </h3>
+                    <h3 style="float: left; width: 33%;">
+                        {{i.winCount}}
+                    </h3>
+                </div>
+            {% endfor %}
+        </div>
+    <div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<h1>riotapiapp</h1>
+<div class="container">
+    <form action="{% url 'result' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="subject" id="subject">
+        <input type="submit" value="검색">
+    </form>
+</div>
