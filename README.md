@@ -1,2 +1,4 @@
 # Django_Practice_TFT
 https://blog.naver.com/tnt01010/223034028506
+
+python mysite\manage.py runserver
